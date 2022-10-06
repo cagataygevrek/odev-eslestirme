@@ -86,6 +86,17 @@ function kartTiklama(olay) {
       acikKart.removeEventListener("click", kartTiklama);
       secilenKart.removeEventListener("click", kartTiklama);
     }, 1000);
+
+    // tebrik görseli
+
+    if (puan == 4) {
+      let tebrikler = document.createElement("img");
+      tebrikler.src = "https://i.hizliresim.com/5xms6ku.gif";
+      resimOlustur = document.querySelector("body").appendChild(tebrikler);
+      setTimeout(function () {
+        resimOlustur.remove();
+      }, 5000);
+    }
   } else {
     //İki açık kartın görsel dosya adı birbirinden farklı, eşleşme yok, kartlar kapansın.
     setTimeout(() => {
