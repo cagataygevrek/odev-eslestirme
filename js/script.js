@@ -14,7 +14,20 @@ const kartTemplate = `
     </div>
 `;
 
-const fotoNumaralari = [10, 20, 30, 20, 10, 40, 40, 30];
+const fotograf = function () {
+  let dizi = [];
+  for (let i = 1; i < 8; i++) {
+    let rastgeleBul = Math.floor(Math.random() * 99);
+    dizi.push(rastgeleBul, rastgeleBul);
+    if (dizi.length === 8) break;
+  }
+
+  return dizi;
+};
+
+const fotoNumaralari = fotograf();
+
+// const fotoNumaralari = [10, 20, 30, 20, 10, 40, 40, 30];
 
 for (fotoNumara of fotoNumaralari) {
   const yenikart = document.createElement("div");
